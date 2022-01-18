@@ -38,7 +38,7 @@ export class DivisionComponent implements OnInit {
       .subscribe(
         response => {
           console.log(response);
-          window.location.reload();
+          this.router.navigate(['/divisi']);
         },
         error => {
           console.log(error);

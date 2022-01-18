@@ -38,10 +38,7 @@ export class DivisionComponent implements OnInit {
       .subscribe(
         response => {
           console.log(response);
-          this.router.navigate(['/divisi'])
-          .then(() => {
-            window.location.reload();
-          });
+          window.location.reload();
         },
         error => {
           console.log(error);
@@ -49,9 +46,6 @@ export class DivisionComponent implements OnInit {
   }
 
   detailsDivision(division_id:any): void {
-    this.router.navigate(['/divisi/' + division_id])
-    .then(() => {
-      window.location.reload();
-    });
+    this.router.navigate(['/divisi/' + division_id]);
   }
 }

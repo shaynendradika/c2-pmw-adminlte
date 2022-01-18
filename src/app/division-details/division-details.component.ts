@@ -33,10 +33,7 @@ export class DivisionDetailsComponent implements OnInit {
       response => {
           console.log(response);
           this.message = 'The division was updated!';
-          this.router.navigate(['/divisi'])
-          .then(() => {
-            window.location.reload();
-          });
+          this.router.navigate(['/divisi']);
         },
         error => {
           console.log(error);

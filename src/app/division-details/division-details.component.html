@@ -1,0 +1,26 @@
+<div class="content-wrapper">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          Ubah Divisi
+        </div>
+        <div class="card-body">
+          <div class="submit-form">
+            <div class="form-group">
+              <label for="name">Nama Divisi</label>
+              <input type="text" class="form-control" id="name" [(ngModel)]="division.name" required name="name" />
+            </div>
+
+            <div class="form-group">
+              <label for="description">Deskripsi</label>
+              <input class="form-control" id="description" [(ngModel)]="division.description" required name="description" />
+            </div>
+
+            <button (click)="updateDivision()" class="btn btn-success">Simpan Perubahan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

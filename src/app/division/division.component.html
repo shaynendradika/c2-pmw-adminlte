@@ -1,0 +1,34 @@
+<div class="content-wrapper">
+  <div class="row">
+      <div class="col-12">
+          <div class="card">
+              <div class="card-header">
+                Divisi List
+              </div>
+              <div class="card-body">
+                  <table class="table table-head-fixed text-nowrap">
+                      <thead>
+                          <tr>
+                              <th>ID</th>
+                              <th>Name</th>
+                              <th>Description</th>
+                              <th>Action</th>
+                          </tr>
+                      </thead>
+                      <tbody *ngFor="let currentDivision of divisions; let i = index">
+                          <tr>
+                              <td>{{currentDivision._id}}</td>
+                              <td>{{currentDivision.name}}</td>
+                              <td>{{currentDivision.description}}</td>
+                              <td>
+                                  <button (click)="deleteDivision(currentDivision._id)" class="btn btn-danger mr-2">Hapus</button>
+                                  <button (click)="detailsDivision(currentDivision._id)" class="btn btn-info">Ubah</button>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
